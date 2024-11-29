@@ -1,0 +1,231 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family:"Roboto", sans-serif;
+}
+body{
+    background-color: #ccc;
+}
+header{
+    padding: 16px 0 0;
+    border-bottom: 1px solid #3d00008a;
+    box-shadow: 1px 1px 5px #3d0000;
+    color:#3d0000;
+    margin-bottom: 56px;
+    position: sticky;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    
+}
+header h1{
+    font-size: 2.5em;
+}
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container{
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+.menu li{
+    float: left;
+    list-style: none;
+    padding: 16px;
+    position: relative;
+}
+.menu li ::after{
+    content: " ";
+    width: 0%;
+    height: 4px;
+    background-color: #3d0000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s ease-in-out;
+}
+.menu li:hover ::after{
+    width: 100%;
+    
+}
+
+.clear{
+    clear: both;
+
+}
+.menu li a{
+    text-decoration: none;
+    color: #3d0000;
+    font-size: 1.5em;
+
+}
+.menu li a:hover{
+    color: #3d000094;
+    transition: 0.5s;
+}
+/*----------*/
+
+.destaque{
+    margin-bottom: 36px;
+}
+.sobre-loja img{
+    height: 450px;
+    max-width: 100%;
+    margin-left: 60px;
+    width: 400px;
+    
+
+}
+
+.destaque .sobre-loja{
+    display: flex;
+    justify-content: center;
+   
+}
+.destaque{
+    margin-top: 56px;
+    
+}
+.sobre-loja .image-initial{
+    max-width: 100%;
+    
+    
+    
+}
+.sobre-loja .texto{
+    max-width: 100%;
+    width: 450px;
+    margin-left: 60px;
+    
+}
+.sobre-loja .texto h2{
+    border-bottom: 2px solid #3d0000;
+    text-transform: uppercase;
+    font-style: italic;
+    padding: 5px;
+    margin-bottom: 30px;
+    color: #3d0000;
+}
+.sobre-loja .texto p{
+    margin-top: 15px;
+    text-indent: 1em;
+    text-align: justify;
+}
+/*---------------------------*/
+.produtos h2{
+    
+    border-bottom: 2px solid #3d0000;
+    max-width: 100%;
+    width: 95%;
+    text-transform: uppercase;
+    font-style: italic;
+    padding: 5px;
+    margin-bottom: 30px;
+    color: #3d0000;
+
+
+}
+.adc-carrinho ul{
+    display: grid;
+    grid-template-columns: repeat(4, 24.45%);
+    column-gap: 1%;
+    row-gap: 5%;
+    margin-left: 30px;
+
+}
+.adc-carrinho ul li{
+    list-style-type: none;
+}
+
+li img{
+    height: 250px;
+}
+li h3{
+    margin-top: 10px;
+    margin-bottom: 5px;
+    width: 300px;
+
+}
+li p{
+    text-align: left;
+    text-overflow: clip;
+    color: rgba(0, 0, 0, 0.81);
+    width: 200px;
+}
+li button{
+    margin-top: 10px;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: #3d0000;
+    color: #fff;
+    cursor: pointer;
+    
+}
+li button:hover{
+    background-color: #3d000069;
+    transition: 0.5s;
+}
+
+/*Mobile*/
+@media screen and (max-width:767px){
+    
+    .container{
+        max-width: 90%;
+    }
+    .destaque .sobre-loja{
+        display: block;
+    }
+    .destaque .sobre-loja img{
+        margin: 0;
+        max-width: 100%;
+    }
+    .sobre-loja .texto{
+        max-width: 100%;
+        width: 300px;
+       margin: 0 30px;
+    }
+    .adc-carrinho ul {
+       display: block;
+    }
+    .adc-carrinho ul li{
+        margin-bottom: 20px;
+    }
+    
+}
+/*Tablets*/
+@media  screen and (min-width: 768px) and (max-width: 1023px) {
+    .sobre-loja{
+        max-width: 100%;
+    }
+    .destaque .sobre-loja{
+        display: block;
+    }
+    .sobre-loja .texto{
+        max-width: 100%;
+        width: 95%;
+        align-items: center;
+        margin: 0;
+       
+    }
+    .destaque .sobre-loja img{
+        max-width: 100%;
+        width: 90%;
+        margin: 0;
+
+    }
+    .produtos h2{
+        margin: 30px 0;
+
+    }
+    #produtos ul{
+        grid-template-columns: repeat(2, 45%);
+        column-gap: 1%;
+        row-gap: 5%;  
+     }
+
+}
